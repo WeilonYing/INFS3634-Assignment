@@ -1,0 +1,24 @@
+[
+  {
+    "question": "What is an object?",
+    "a": "A blueprint for an implementation",
+    "b": "A programming paradigm",
+    "c": "A collection of information and code",
+    "d": "A set of computer instructions defining some actions",
+    "answer:": "c"
+  },
+  {
+    "question": "Which of the following is not a feature of object-oriented programming?",
+    "a": "Encapsulation",
+    "b": "Propagation",
+    "c": "Inheritance",
+    "d": "Abstraction",
+    "answer": "b"
+  },
+  {
+    "question": "True or False? A field is data containing information about an object",
+    "a": "True",
+    "b": "False",
+    "answer": "a"
+  }
+]
