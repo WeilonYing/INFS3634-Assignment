@@ -6,17 +6,39 @@
     android:layout_margin="1sp">
 
     <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.CardView"
+        android:background="@drawable/card_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/topic_card_view">
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        android:minHeight="200dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/topic_text"
-            android:layout_alignParentTop="true"
-            android:textSize="30sp"
-            />
+            android:padding="1sp"
+            android:layout_margin="1sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mtrl_card_spacing"
+                android:id="@+id/topic_text"
+                android:layout_alignParentTop="true"
+                android:textSize="30sp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/material_text_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AIYAAA"/>
+        </LinearLayout>
+
 
     </com.google.android.material.card.MaterialCardView>
 

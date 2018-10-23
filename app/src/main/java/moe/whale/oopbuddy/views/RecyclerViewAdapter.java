@@ -6,14 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import moe.whale.oopbuddy.Chapter;
 import moe.whale.oopbuddy.R;
 
 import java.util.List;
 
+/**
+ * RecyclerViewAdapter
+ * Used for displaying chapter titles using Material Card views
+ */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
-    private List<String> objects;
+    private List<Chapter> objects;
 
-    public RecyclerViewAdapter(List<String> objects) {
+    /**
+     * Construct the adapter using given chapters
+     * @param objects A list of chapter objects
+     */
+    public RecyclerViewAdapter(List<Chapter> objects) {
         super();
         this.objects = objects;
     }
@@ -30,7 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder recyclerViewHolder, int i) {
-        recyclerViewHolder.mTopicText.setText(this.objects.get(i));
+        recyclerViewHolder.mTopicText.setText(this.objects.get(i).getTitle());
     }
 
     @Override
