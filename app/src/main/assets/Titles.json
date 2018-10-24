@@ -1,26 +1,32 @@
 [
   {
     "title": "Introduction to OOP",
-    "filename": "Introduction.md"
+    "filename": "Introduction.md",
+    "testfile": "IntroductionTest.json"
   },
   {
     "title": "Classes and Objects",
-    "filename": "Classes_and_Objects.md"
+    "filename": "Classes_and_Objects.md",
+    "testfile": "ClassesAndObjectsTest.json"
   },
   {
     "title": "Abstraction",
-    "filename": "Abstraction.md"
+    "filename": "Abstraction.md",
+    "testfile": "AbstractionTest.json"
   },
   {
     "title": "Polymorphism",
-    "filename": "Polymorphism.md"
+    "filename": "Polymorphism.md",
+    "testfile": "PolymorphismTest.json"
   },
   {
     "title": "Inheritance",
-    "filename": "Inheritance.md"
+    "filename": "Inheritance.md",
+    "testfile": "InheritanceTest.json"
   },
   {
     "title": "Encapsulation",
-    "filename": "Encapsulation.md"
+    "filename": "Encapsulation.md",
+    "testfile": "EncapsulationTest.json"
   }
 ]

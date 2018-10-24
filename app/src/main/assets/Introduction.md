@@ -24,3 +24,4 @@ OOP is characterised by the following features, which will be covered in later m
   or descendants
 * Inheritance - The ability for an object to take and build upon the properties of another class
 * Encapsulation - The concept of hiding and controlling access to an object's data and code
+
