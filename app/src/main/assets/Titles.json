@@ -2,31 +2,37 @@
   {
     "title": "Introduction to OOP",
     "filename": "Introduction.md",
-    "testfile": "IntroductionTest.json"
+    "testfile": "IntroductionTest.json",
+    "blurb": "Just what is this OOP thing and why should you care?"
   },
   {
     "title": "Classes and Objects",
     "filename": "Classes_and_Objects.md",
-    "testfile": "ClassesAndObjectsTest.json"
+    "testfile": "ClassesAndObjectsTest.json",
+    "blurb": "Learn about the basic building blocks of Object Oriented Programming"
   },
   {
     "title": "Abstraction",
     "filename": "Abstraction.md",
-    "testfile": "AbstractionTest.json"
+    "testfile": "AbstractionTest.json",
+    "blurb": "How abstraction with OOP can help you focus on the task at hand."
   },
   {
     "title": "Polymorphism",
     "filename": "Polymorphism.md",
-    "testfile": "PolymorphismTest.json"
+    "testfile": "PolymorphismTest.json",
+    "blurb": "All Apples are Fruits! Learn how Polymorphism can help you make your code as specific or as general as you need it to be."
   },
   {
     "title": "Inheritance",
     "filename": "Inheritance.md",
-    "testfile": "InheritanceTest.json"
+    "testfile": "InheritanceTest.json",
+    "blurb": "Probably the most important feature of OOP. Learn how you can build on the code you (or others) have written before."
   },
   {
     "title": "Encapsulation",
     "filename": "Encapsulation.md",
-    "testfile": "EncapsulationTest.json"
+    "testfile": "EncapsulationTest.json",
+    "blurb": "Learn how encapsulation ensures that others use your code the way you want it."
   }
 ]

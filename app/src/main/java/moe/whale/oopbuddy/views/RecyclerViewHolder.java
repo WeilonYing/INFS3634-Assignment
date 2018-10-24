@@ -22,9 +22,9 @@ import moe.whale.oopbuddy.R;
  */
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
     View mView;
-    //final MaterialCardView mCardView;
+
     final TextView mTopicText;
-    final ImageView mImageView;
+    final TextView mBlurbText;
     final MaterialButton mOpenButton;
     final MaterialButton mTestButton;
 
@@ -37,10 +37,8 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
         mView = itemView;
         mTopicText = itemView.findViewById(R.id.topic_text);
-        mImageView = itemView.findViewById(R.id.chapter_image);
+        mBlurbText = itemView.findViewById(R.id.topic_blurb);
         mOpenButton = itemView.findViewById(R.id.open_chapter_button);
         mTestButton = itemView.findViewById(R.id.test_chapter_button);
-
-        Picasso.get().load("https://http.cat/100.jpg").into(mImageView);
     }
 }

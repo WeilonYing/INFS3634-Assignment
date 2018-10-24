@@ -22,40 +22,23 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/topic_text"
+                android:id="@+id/result_question_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/mtrl_card_spacing"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/topic_blurb"
+                android:id="@+id/result_response_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:textSize="15sp" />
+                android:layout_margin="@dimen/mtrl_card_spacing" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/result_answer_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="1sp"
-                android:layout_margin="1sp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/open_chapter_button"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/open_chapter"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/test_chapter_button"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/test_chapter"/>
-            </LinearLayout>
+                android:layout_margin="@dimen/mtrl_card_spacing" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

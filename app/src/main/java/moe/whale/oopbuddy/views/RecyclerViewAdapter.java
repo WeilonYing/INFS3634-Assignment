@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import moe.whale.oopbuddy.Chapter;
 import moe.whale.oopbuddy.ChapterActivity;
 import moe.whale.oopbuddy.R;
+import moe.whale.oopbuddy.TestActivity;
 
 import java.util.List;
 
@@ -44,10 +45,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder recyclerViewHolder, final int i) {
         recyclerViewHolder.mTopicText.setText(mObjects.get(i).getTitle());
+        recyclerViewHolder.mBlurbText.setText(mObjects.get(i).getBlurb());
         recyclerViewHolder.mOpenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, ChapterActivity.class);
+                intent.putExtra("chapter_index", i);
+                mContext.startActivity(intent);
+            }
+        });
+        recyclerViewHolder.mTestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, TestActivity.class);
                 intent.putExtra("chapter_index", i);
                 mContext.startActivity(intent);
             }

@@ -36,22 +36,4 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
-
-    /**
-     * Loads string from a given asset text file
-     * @param filePath The path to the text file from src.main.assets
-     * @return A string containing the text read from the file
-     */
-    private String loadStringFromAsset(String filePath) {
-        // Code written with assistance from StackOverflow: https://stackoverflow.com/a/13814551
-        try {
-            InputStream input = getApplicationContext().getAssets().open(filePath);
-            byte[] textBuffer = new byte[input.available()];
-            input.read(textBuffer);
-            return new String(textBuffer, "UTF-8");
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 }

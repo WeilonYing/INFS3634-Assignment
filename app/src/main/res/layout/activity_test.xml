@@ -1,67 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="moe.whale.oopbuddy.TestActivity">
+    android:fillViewport="true">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.MaterialComponents.CardView"
-        android:background="@drawable/card_background"
+    <!-- "Container" view to hold the rest of the contents, as scrollview only permits one child -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/mtrl_card_spacing"
-        android:layout_marginTop="@dimen/mtrl_card_spacing"
-        android:layout_marginRight="@dimen/mtrl_card_spacing">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/progress_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:text="You got 0 out of 4 questions correct" /> <!-- TODO: programmatically change this -->
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.MaterialComponents.CardView"
-        android:background="@drawable/card_background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/mtrl_card_spacing"
-        android:layout_marginTop="@dimen/mtrl_card_spacing"
-        android:layout_marginRight="@dimen/mtrl_card_spacing">
-
+        <!-- Layout containing the question UI -->
         <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="moe.whale.oopbuddy.TestActivity"
+            android:id="@+id/question_layout_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
             android:orientation="vertical">
 
-            <TextView
+            <!-- Card for showing user's current progress -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/card_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/label_question"/>
+                android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                android:layout_marginTop="@dimen/mtrl_card_spacing"
+                android:layout_marginRight="@dimen/mtrl_card_spacing">
 
-            <TextView
-                android:id="@+id/question_text"
+                <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card for holding question text -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/card_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30sp" />
+                android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                android:layout_marginTop="@dimen/mtrl_card_spacing"
+                android:layout_marginRight="@dimen/mtrl_card_spacing">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_question"/>
+
+                    <TextView
+                        android:id="@+id/question_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card for holding candidate answer buttons -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_choose"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_candidate_answers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <!-- Candidate answer buttons will be placed within this view -->
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.button.MaterialButton
+        <!-- Layout containing the results page -->
+        <LinearLayout
+            android:id="@+id/results_layout_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sample question" /> <!-- TODO: program this -->
-    </com.google.android.material.card.MaterialCardView>
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- This layout is initially invisible -->
 
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textSize="30sp"
+                android:text="@string/results_title" />
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/results_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Result answer cards go here -->
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finish_test_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/finish_test"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

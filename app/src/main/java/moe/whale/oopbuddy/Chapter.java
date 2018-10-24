@@ -14,6 +14,8 @@ import java.io.InputStream;
 public class Chapter {
     String title;
     String filename;
+    String testfile;
+    String blurb;
 
     // Keep one copy of chapters to share across the app.
     private static transient Chapter[] mChapters = null;
@@ -32,6 +34,18 @@ public class Chapter {
      */
     public String getFilename() {
         return this.filename;
+    }
+
+    /**
+     * Get the filename of the chapter's test (or quiz)
+     * @return
+     */
+    public String getTestfile() {
+        return this.testfile;
+    }
+
+    public String getBlurb() {
+        return this.blurb;
     }
 
     /**
