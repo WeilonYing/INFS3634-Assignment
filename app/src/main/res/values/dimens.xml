@@ -1,4 +1,4 @@
 <resources>
-    <dimen name="text_margin">16dp</dimen>
+    <dimen name="text_margin">10dp</dimen>
     <dimen name="tall_toolbar_height">100sp</dimen>
 </resources>
