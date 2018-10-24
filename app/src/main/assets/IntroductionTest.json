@@ -18,5 +18,13 @@
       "Abstraction"
     ],
     "answer": 0
+  },
+  {
+    "question": "True or False? A field is data containing information about an object",
+    "candidates": [
+      "True",
+      "False"
+    ],
+    "answer": 0
   }
 ]

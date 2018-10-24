@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "question": "What is OOP?",
+    "candidates": [
+      "Observable Orientation Programming",
+      "Object Oriented Programming",
+      "Oriented Object Programming",
+      "Obviously Omaewamoushindeiru Programming"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is not a feature of OOP?",
+    "candidates": [
+      "Precedence",
+      "Encapsulation",
+      "Inheritance",
+      "Abstraction"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "True or False? A field is data containing information about an object",
+    "candidates": [
+      "True",
+      "False"
+    ],
+    "answer": 0
+  }
+]

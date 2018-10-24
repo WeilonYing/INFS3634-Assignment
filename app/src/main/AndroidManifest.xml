@@ -36,6 +36,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="moe.whale.oopbuddy.MainActivity" />
         </activity>
+        <activity android:name=".VideoActivity"></activity>
     </application>
 
 </manifest>

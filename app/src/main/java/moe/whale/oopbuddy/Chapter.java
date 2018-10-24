@@ -16,6 +16,7 @@ public class Chapter {
     String filename;
     String testfile;
     String blurb;
+    String youtubeId;
 
     // Keep one copy of chapters to share across the app.
     private static transient Chapter[] mChapters = null;
@@ -46,6 +47,10 @@ public class Chapter {
 
     public String getBlurb() {
         return this.blurb;
+    }
+
+    public String getYoutubeId() {
+        return this.youtubeId;
     }
 
     /**
