@@ -20,7 +20,7 @@ import moe.whale.oopbuddy.R;
  * RecyclerViewHolder
  * Provides programming logic for each RecyclerView item for displaying Material Card views
  */
-public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class RecyclerViewHolder extends RecyclerView.ViewHolder {
     View mView;
     //final MaterialCardView mCardView;
     final TextView mTopicText;
@@ -42,38 +42,5 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
         mTestButton = itemView.findViewById(R.id.test_chapter_button);
 
         Picasso.get().load("https://http.cat/100.jpg").into(mImageView);
-        itemView.setOnClickListener(this);
-        mOpenButton.setOnClickListener(new OpenButtonClickListener());
-        mTestButton.setOnClickListener(new TestButtonClickListener());
-    }
-
-    /**
-     * Defines logic to be run when the holder's view has been tapped/clicked
-     * @param view The view being tapped/clicked on.
-     */
-    @Override
-    public void onClick(View view) {
-        // TODO: Implement this
-        Toast.makeText(
-                view.getContext(),
-                Integer.toString(this.getAdapterPosition()) + " has been clicked.",
-                Toast.LENGTH_LONG)
-            .show();
-    }
-
-    class OpenButtonClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-            Context context = mView.getContext();
-            Intent intent = new Intent(context, ChapterActivity.class);
-            context.startActivity(intent);
-        }
-    }
-
-    class TestButtonClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-
-        }
     }
 }

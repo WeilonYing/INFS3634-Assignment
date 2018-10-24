@@ -1,5 +1,6 @@
 package moe.whale.oopbuddy;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,7 +16,7 @@ import java.util.Arrays;
  * Entry point for the OOPBuddy app
  */
 public class MainActivity extends AppCompatActivity {
-
+    private Context mContext;
     /**
      * Create the main activity
      * @param savedInstanceState The given state of the app if it was opened in the past
@@ -24,13 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String chapterString = loadStringFromAsset("Titles.json");
-        System.out.println(chapterString);
-        Gson gson = new Gson();
-        Chapter[] chapters = gson.fromJson(chapterString, Chapter[].class);
+        mContext = getApplicationContext();
+
         RecyclerView recyclerView = findViewById(R.id.topic_recycler_view);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(Arrays.asList(chapters));
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(
+                Arrays.asList(Chapter.getChaptersFromAssets(mContext)), mContext);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
