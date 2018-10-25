@@ -77,4 +77,15 @@ public class Chapter {
 
         return mChapters;
     }
+
+    public static String readChapter(Context context, int chapterIndex) {
+        try{
+            InputStream input = context.getAssets().open(mChapters[chapterIndex].filename);
+            byte[] textBuffer = new byte[input.available()];
+            input.read(textBuffer);
+            return new String(textBuffer, "UTF-8");
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }

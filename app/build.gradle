@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        pickFirst  'META-INF/*'
+    }
 }
 
 dependencies {
@@ -27,8 +31,10 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'com.squareup.picasso:picasso:2.71828'
     compile 'com.github.mukeshsolanki:MarkdownView-Android:1.0.6'
+    compile 'com.google.cloud:google-cloud-translate:1.48.0'
     testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }
+

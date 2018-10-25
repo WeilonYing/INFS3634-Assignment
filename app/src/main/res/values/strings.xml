@@ -8,4 +8,6 @@
     <string name="label_choose">Choose an answer</string>
     <string name="results_title">Results</string>
     <string name="finish_test">Finish</string>
+    <string name="translate_button_string">Translate to another language</string>
+    <string name="youtube_button_string">Watch video on YouTube</string>
 </resources>
