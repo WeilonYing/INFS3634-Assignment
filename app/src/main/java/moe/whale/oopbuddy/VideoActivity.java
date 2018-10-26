@@ -2,6 +2,7 @@ package moe.whale.oopbuddy;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -10,6 +11,7 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 public class VideoActivity extends YouTubeBaseActivity {
+    private static final String TAG = VideoActivity.class.getSimpleName();
     private YouTubePlayer mYouTubePlayer;
     private YouTubePlayerView mYouTubePlayerView;
     private boolean mWasCued;
@@ -45,11 +47,12 @@ public class VideoActivity extends YouTubeBaseActivity {
             youTubePlayer.setPlayerStateChangeListener(new YouTubePlayer.PlayerStateChangeListener() {
                 @Override
                 public void onLoading() {
-                    // do nothing
+                    Log.v(TAG, "Loading video");
                 }
 
                 @Override
                 public void onLoaded(String s) {
+                    Log.v(TAG, "Video loaded");
                     youTubePlayer.play();
                 }
 
@@ -60,12 +63,12 @@ public class VideoActivity extends YouTubeBaseActivity {
 
                 @Override
                 public void onVideoStarted() {
-                    // do nothing
+                    Log.v(TAG, "Video has started");
                 }
 
                 @Override
                 public void onVideoEnded() {
-                    // do nothing
+                    Log.v(TAG, "Video has stopped");
                 }
 
                 @Override

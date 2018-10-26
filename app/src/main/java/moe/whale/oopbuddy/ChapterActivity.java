@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import com.google.android.material.button.MaterialButton;
 import com.google.cloud.translate.Translate;
@@ -15,6 +16,7 @@ import com.mukesh.MarkdownView;
 
 
 public class ChapterActivity extends AppCompatActivity {
+    public static final String TAG = ChapterActivity.class.getSimpleName();
     MarkdownView mMarkdownView;
     String[] mLanguages = {
             "English",
@@ -55,6 +57,7 @@ public class ChapterActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent = new Intent(getApplicationContext(), VideoActivity.class);
                     intent.putExtra("chapter_index", index);
+                    Log.v(TAG, "Starting YouTube activity");
                     startActivity(intent);
                 }
             });
@@ -68,9 +71,11 @@ public class ChapterActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int language) {
                             if (language > 0) { // 0 is english
+                                Log.v(TAG, "Showing original document");
                                 new TranslateTask().execute(index, language);
                             } else {
                                 // just show the original document
+                                Log.v(TAG, "Showing translated document. Index: " + language);
                                 mMarkdownView.loadMarkdownFromAssets(chapters[index].getFilename());
                             }
                         }
@@ -78,9 +83,17 @@ public class ChapterActivity extends AppCompatActivity {
                     builder.show();
                 }
             });
+        } else {
+            Log.e(TAG, "Did not receive chapter index. Unable to load contents!");
         }
+
+        Log.v(TAG, "Activity has loaded");
     }
 
+    /**
+     * TranslateTask
+     * Asynchronous task for running translation of document in the background
+     */
     class TranslateTask extends AsyncTask<Integer, Void, String> {
         @Override
         protected String doInBackground(Integer... params) {

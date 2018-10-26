@@ -3,12 +3,12 @@ Assignment project for INFS3634 (Mobile Application Development) at the Universi
 OOPBuddy is an Android app made by Weilon Ying for the INFS3634 course assignment in 2018 (S2).
 
 ## How to build and run in Android Studio
-* Download the source code from this repository by using `git clone https://github.com/WeilonYing/INFS3634-Assignment.git`
+* Download the source code from this repository by using `git clone https://github.com/WeilonYing/OOPBuddy.git`
   * If you obtained the source code from downloading a zipped file, unzip the files to a directory of your choice
 * Open Android Studio. If you're already in a project, close the project by going to "File -> Close Project"
 * Click on "Import Project"
 * Navigate to the directory where you have downloading/unzipped the source code and select it. The
-directory is most likely called "INFS3634-Assignment"
+directory is most likely called "OOPBuddy"
 * Select "Import project from external model", then select "Gradle". Then select "Next"
 * Select "Finish" to complete the setup
   * Android Studio may ask to overwrite a file. Select "Yes" if this is the case.

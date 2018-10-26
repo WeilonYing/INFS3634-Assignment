@@ -3,6 +3,7 @@ package moe.whale.oopbuddy;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
@@ -17,6 +18,7 @@ import java.util.Arrays;
  */
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
+    private static final String TAG = MainActivity.class.getSimpleName();
     /**
      * Create the main activity
      * @param savedInstanceState The given state of the app if it was opened in the past
@@ -35,5 +37,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
+
+        Log.v(TAG, "Activity has started successfully");
     }
 }

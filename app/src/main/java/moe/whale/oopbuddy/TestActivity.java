@@ -2,6 +2,7 @@ package moe.whale.oopbuddy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -10,6 +11,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 
 public class TestActivity extends AppCompatActivity {
+    private static final String TAG = TestActivity.class.getSimpleName();
     private int mQuestionIndex = 0;
     private int mNumCorrect = 0;
 
@@ -46,9 +48,12 @@ public class TestActivity extends AppCompatActivity {
                     getApplicationContext(), chapters[index].getTestfile());
             mResponses = new int[mQuestions.length];
             mCandidateAnswers = findViewById(R.id.layout_candidate_answers);
+        } else {
+            Log.e(TAG, "Unable to load test. No chapter index provided");
         }
 
         loadQuestion();
+        Log.v(TAG, "Activity loaded");
     }
 
     /**
@@ -58,6 +63,7 @@ public class TestActivity extends AppCompatActivity {
         setQuestionText();
         setCandidateAnswers();
         setProgressText();
+        Log.v(TAG, "Question " + mQuestionIndex + " loaded");
     }
 
     /**
@@ -93,6 +99,7 @@ public class TestActivity extends AppCompatActivity {
      * @param answer The index of the candidate answer
      */
     private void checkAnswer(int answer) {
+        Log.v(TAG, "User answered with answer number " + answer);
         if (mQuestions[mQuestionIndex].answer == answer) {
             Snackbar.make(mCandidateAnswers, "Correct!", Snackbar.LENGTH_SHORT).show();
             mNumCorrect++;
@@ -105,6 +112,7 @@ public class TestActivity extends AppCompatActivity {
             loadQuestion();
         } else { // otherwise finish up
             showResults();
+            Log.v(TAG, "Finished test with result: " + mNumCorrect + " out of " + mQuestions.length);
         }
     }
 
