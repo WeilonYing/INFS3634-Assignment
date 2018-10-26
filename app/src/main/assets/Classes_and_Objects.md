@@ -27,7 +27,7 @@ f.eat(); // This line calls a procedure (or method) from that object.
 
 ### Prototype-based OOP
 In prototype-based OOP, classes do not exist. Instead, objects are the primary entities.
-Instead of classes, objects are defined and instantiated by the cloning of another class, i.e. a
+Instead of classes, objects are defined and instantiated by the cloning of another object, i.e. a
 *prototype*.
 
 Example in JavaScript (a prototype-based language):

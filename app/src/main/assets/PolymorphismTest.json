@@ -1,26 +1,26 @@
 [
   {
-    "question": "What is OOP?",
+    "question": "What is Polymorphism?",
     "candidates": [
-      "Observable Orientation Programming",
-      "Object Oriented Programming",
-      "Oriented Object Programming",
-      "Obviously Omaewamoushindeiru Programming"
+      "The alternative term for procedural programming",
+      "The ability to base an implementation of a class off that of another class",
+      "The ability to represent a parent type using its subtypes",
+      "The representation of multiple different types under a single type"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "How can polymorphism be implemented?",
+    "candidates": [
+      "Using abstract classes and callbacks",
+      "Using interfaces and subtyping",
+      "Using interfaces and encapsulation",
+      "Using subtyping and overriding"
     ],
     "answer": 1
   },
   {
-    "question": "Which of the following is not a feature of OOP?",
-    "candidates": [
-      "Precedence",
-      "Encapsulation",
-      "Inheritance",
-      "Abstraction"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "True or False? A field is data containing information about an object",
+    "question": "True or False? A child class can be referred to using its parent class",
     "candidates": [
       "True",
       "False"

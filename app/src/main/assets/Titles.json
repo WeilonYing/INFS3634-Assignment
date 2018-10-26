@@ -11,33 +11,34 @@
     "filename": "Classes_and_Objects.md",
     "testfile": "ClassesAndObjectsTest.json",
     "blurb": "Learn about the basic building blocks of Object Oriented Programming",
-    "youtubeId": "pTB0EiLXUC8"
+    "youtubeId": "8yjkWGRlUmY"
   },
   {
     "title": "Abstraction",
     "filename": "Abstraction.md",
     "testfile": "AbstractionTest.json",
     "blurb": "How abstraction with OOP can help you focus on the task at hand.",
-    "youtubeId": "pTB0EiLXUC8"
+    "youtubeId": "L1-zCdrx8Lk"
   },
   {
     "title": "Polymorphism",
     "filename": "Polymorphism.md",
     "testfile": "PolymorphismTest.json",
     "blurb": "All Apples are Fruits! Learn how Polymorphism can help you make your code as specific or as general as you need it to be.",
-    "youtubeId": "pTB0EiLXUC8"
+    "youtubeId": "tIWm3I_Zu7I"
   },
   {
     "title": "Inheritance",
     "filename": "Inheritance.md",
     "testfile": "InheritanceTest.json",
     "blurb": "Possibly the most important feature of OOP. Learn how you can build on the code you (or others) have written before.",
-    "youtubeId": "pTB0EiLXUC8"
+    "youtubeId": "C0HiweeOuGw"
   },
   {
     "title": "Encapsulation",
     "filename": "Encapsulation.md",
     "testfile": "EncapsulationTest.json",
-    "blurb": "Learn how encapsulation ensures that others use your code the way you want it."
+    "blurb": "Learn how encapsulation ensures that others use your code the way you want it.",
+    "youtubeId": "sNKKxc4QHqA"
   }
 ]

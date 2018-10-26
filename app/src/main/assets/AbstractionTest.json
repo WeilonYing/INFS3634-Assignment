@@ -1,26 +1,26 @@
 [
   {
-    "question": "What is OOP?",
+    "question": "What is Abstraction?",
     "candidates": [
-      "Observable Orientation Programming",
-      "Object Oriented Programming",
-      "Oriented Object Programming",
-      "Obviously Omaewamoushindeiru Programming"
+      "A form of art",
+      "The combination of the implementation and use of an object/class",
+      "The separation of the implementation and the use of an object/class",
+      "The documentation of a class' implementation, such as description"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
-    "question": "Which of the following is not a feature of OOP?",
+    "question": "Which of the following is correct about Abstraction?",
     "candidates": [
-      "Precedence",
-      "Encapsulation",
-      "Inheritance",
-      "Abstraction"
+      "Abstraction requires the user to know how a class is implemented",
+      "Abstraction cannot be done just by documenting how the class can be used",
+      "Abstraction cannot be done just by providing a common interface",
+      "Abstraction can be done through the provision of a common interface"
     ],
-    "answer": 0
+    "answer": 3
   },
   {
-    "question": "True or False? A field is data containing information about an object",
+    "question": "True or False? Creating and using JavaDocs is a good way to allow abstraction of your code",
     "candidates": [
       "True",
       "False"

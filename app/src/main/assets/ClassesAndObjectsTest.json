@@ -1,26 +1,33 @@
 [
   {
-    "question": "What is OOP?",
+    "question": "Which of the following is NOT a type of OOP?",
     "candidates": [
-      "Observable Orientation Programming",
-      "Object Oriented Programming",
-      "Oriented Object Programming",
-      "Obviously Omaewamoushindeiru Programming"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which of the following is not a feature of OOP?",
-    "candidates": [
-      "Precedence",
-      "Encapsulation",
-      "Inheritance",
-      "Abstraction"
+      "Procedural-based OOP",
+      "Prototype-based OOP",
+      "Class-based OOP"
     ],
     "answer": 0
   },
   {
-    "question": "True or False? A field is data containing information about an object",
+    "question": "In class-based OOP, what is the main difference between classes and objects?",
+    "candidates": [
+      "There is no difference",
+      "Objects define the structure and behaviour of a class",
+      "Classes are an instance of an object",
+      "Classes define the structure and behaviour of an object"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "True or False? In prototype-based OOP, objects are defined by instantiating a class",
+    "candidates": [
+      "True",
+      "False"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "True or False? In prototype-based OOP, classes do not exist",
     "candidates": [
       "True",
       "False"
